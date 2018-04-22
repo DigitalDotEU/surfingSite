@@ -90,7 +90,7 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(../images/main.png) no-repeat center center;
+    background: url(../images/main2.png) no-repeat center center;
     -webkit-background-size: 80%;
     -moz-background-size: 80%;
     -o-background-size: 80%;
@@ -134,7 +134,7 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
       padding: 0; }
       .container .video .left img {
         width: 100%;
-        height: 55em; }
+        height: auto; }
       .container .video .left p {
         padding: 3em 5em 0 5em;
         font-size: 2.5em;
@@ -151,18 +151,21 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
         background-color: #5da8ef;
         margin-left: 13em; }
     .container .video .right {
-      background: url(../images/img2.png) no-repeat center center;
+      /*background: url(../images/img2.png) no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      background-size: cover;
+      background-size: cover;*/
       margin-top: 8em;
       margin-left: -8em;
-      height: 60em;
       padding: 0;
       display: flex;
       align-items: center;
       justify-content: center; }
+      .container .video .right img{
+        width: 100%;
+        height: auto;
+      }
       .container .video .right .playButton {
         width: 10em;
         height: 10em;
@@ -170,7 +173,13 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
         background-color: #5da8ef;
         display: flex;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+       }
         .container .video .right .playButton .triangle {
           width: 0;
           height: 0;
@@ -181,14 +190,13 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
       .container .video .right .playButton:hover {
         cursor: pointer; }
     .container .video .right:hover {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/img2.png) no-repeat center center;
+      /*background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/img2.png) no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      background-size: cover;
+      background-size: cover;*/
       margin-top: 8em;
       margin-left: -8em;
-      height: 60em;
       padding: 0;
       display: flex;
       align-items: center;
@@ -254,48 +262,51 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
     align-items: center;
     justify-content: center;
     padding-left: 10em; }
-    .container .training .col-sm-4 {
+    .container .training .col-sm-6 {
       padding: 0 5em; }
-      .container .training .col-sm-4 h2 {
+      .container .training .col-sm-6 h2 {
         font-family: 'Playfair Display', serif; }
-      .container .training .col-sm-4 .shortLine {
+      .container .training .col-sm-6 .shortLine {
         width: 4em;
         height: 4px;
         background-color: #5da8ef;
         margin-bottom: 4em; }
-      .container .training .col-sm-4 p {
+      .container .training .col-sm-6 p {
         font-size: 2.5em;
         color: rgba(0, 0, 0, 0.55);
         padding-bottom: 3em; }
-      .container .training .col-sm-4 h6 {
+      .container .training .col-sm-6 h6 {
         font-size: 2em; }
-      .container .training .col-sm-4 h6:hover {
+      .container .training .col-sm-6 h6:hover {
         color: rgba(0, 0, 0, 0.52);
         cursor: pointer; }
-      .container .training .col-sm-4 .line {
+      .container .training .col-sm-6 .line {
         width: 11em;
         height: 4px;
         background-color: #5da8ef; }
-    .container .training .col-sm-8 {
-      padding: 0;
-      height: 70em;
-      background: url(../images/img3.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
+    .container .training .trainingImg {
+      padding: 0;  
+    }
+    .container .training .trainingImg img{
+      width: 100%;
+      height: auto;
+    }
   .container .point {
-    margin: 15em 30em;
+    margin: 15em;
     display: flex;
     align-items: center;
     justify-content: center; }
-    .container .point .left {
-      height: 50vh;
+    .container .point .left{padding: 0;}
+    .container .point .left img {
+      /*height: 40vh;
       background: url(../images/img4.png) no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      background-size: cover; }
+      background-size: cover; */
+      width: 100%;
+      height: auto;
+    }
     .container .point .right {
       padding-left: 10em; }
       .container .point .right h2 {
@@ -371,13 +382,13 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
     display: flex;
     align-items: center;
     justify-content: center; }
-    .container .camp .left {
-      height: 60em;
-      background: url(../images/img5.png) no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; }
+    .container .camp .left{
+      padding: 0;
+    }
+    .container .camp .left img{
+      width:100%;
+      height: auto;
+       }
     .container .camp .right {
       padding-left: 5em; }
       .container .camp .right p {
@@ -385,7 +396,7 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
         color: rgba(0, 0, 0, 0.55); }
       .container .camp .right h2 {
         font-family: 'Playfair Display', serif;
-        padding: 1em 0 1em 1em; }
+        padding: 1em 0 1em 0; }
       .container .camp .right h6 {
         font-size: 2em;
         color: #5da8ef; }
@@ -544,7 +555,7 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
     .container .header {
       background-position: 0 0;
       height: 60em;
-      background-size: 100%;
+      background-size: 170%;
       padding: 0 5em; }
       .container .header .left {
         padding: 0; }
@@ -591,6 +602,8 @@ nav, .navbar, .header, .definition, .video, .surfboards, .training, .point, .clu
             padding-left: 0; }
     .container .training {
       padding-left: 0; }
+      .trainingLeft{width:100%;}
+      .trainingImg{display: none;}
       .container .training .col-sm-4 {
         width: 100%; }
         .container .training .col-sm-4 h2 {
